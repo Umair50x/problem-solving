@@ -32,17 +32,16 @@ function prntstr () {
         console.log(str); 
     
         while (strlen > 1) {  
-            let cuttedstring = str.substring(str, strlen - 1); 
+            let cuttedstring = str.substring(0, strlen - 1); 
             console.log(cuttedstring);
             strlen -= 1;
         }
         
-        while (strlen => 1) {  //and this works
-            let cuttedstring = str.substring(str, strlen + 1);
+        while (strlen => 1) {
+            let cuttedstring = str.substring(0, strlen + 1);
             console.log(cuttedstring);
             strlen += 1;
-            
-            if (strlen === str.length) 
+            if (strlen == str.length) 
             break;
         }
     }
