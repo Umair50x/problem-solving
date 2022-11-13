@@ -26,28 +26,29 @@ function prntstr () {
     let strlen = str.length;
     
     if (strlen == 1) {  
-    console.log(str);
+        console.log(str);
     } 
     else {
-    console.log(str); 
+        console.log(str); 
     
-    while (strlen > 1) {  
-    let cuttedstring = str.substring(str, strlen - 1); 
-    console.log(cuttedstring);
-    strlen -= 1;
+        while (strlen > 1) {  
+            let cuttedstring = str.substring(str, strlen - 1); 
+            console.log(cuttedstring);
+            strlen -= 1;
+        }
+        
+        while (strlen => 1) {  //and this works
+            let cuttedstring = str.substring(str, strlen + 1);
+            console.log(cuttedstring);
+            strlen += 1;
+            
+            if (strlen === str.length) 
+            break;
+        }
     }
+}
     
-    while (strlen => 1) {  //and this works
-    let cuttedstring = str.substring(str, strlen + 1);
-    console.log(cuttedstring);
-    strlen += 1;
-    
-    if (strlen === str.length) 
-    break;
-    }
-    }
-    }
-    
-    prntstr();
-    
-q    
+
+
+
+    prntstr(); 
